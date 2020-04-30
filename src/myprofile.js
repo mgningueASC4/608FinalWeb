@@ -10,7 +10,7 @@ let time;
 
 $(document).ready(function(){
   date="04-30-20"
-  time="00:57:00"
+  time="10:57:00"
   username="yousef"
   //getFollowers(username);
   getFollowers(username);
