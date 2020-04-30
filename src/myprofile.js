@@ -17,6 +17,8 @@ $(document).ready(function(){
   getFollowees(username);
   getProfileFeedPosts(date, time, 0, username);
   getProfileFeedPosts(date, time, 1, username);
+  getProfileFeedPosts(date, time, 2, username);
+
   //getHomeFeedPosts(date, time, 0, username);
 
   $(".searchButton").click(function(){
