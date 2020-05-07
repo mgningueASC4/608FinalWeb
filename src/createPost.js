@@ -1,6 +1,28 @@
 let binData;
 
+
+function getLat(){
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(function(position) {
+      var positionInfo = "Your current position is (" + "Latitude: " + position.coords.latitude + ", " + "Longitude: " + position.coords.longitude + ")";
+      let lat = position.coords.latitude;
+      localStorage.setItem('lat',position.coords.latitude);
+    });
+  }
+}
+
+function getLong(){
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(function(position) {
+      var positionInfo = "Your current position is (" + "Latitude: " + position.coords.latitude + ", " + "Longitude: " + position.coords.longitude + ")";
+      localStorage.setItem('long',position.coords.longitude);
+    });
+  }
+}
 $(document).ready(function(){
+  getLat();
+  getLong();
+
   $(".logOutButton").click(function(){
     localStorage.clear();
     window.location.replace("index.html");
@@ -10,8 +32,7 @@ $(document).ready(function(){
     let username=localStorage.getItem('usernameStored');
     console.log(username);
     let tags=$("#tags").val();;
-    let lat=$("#lat").val();;
-    let long=$("#long").val();;
+
     let url = `http://608dev-2.net/sandbox/sc/team006/project/post.py`;
     let likeUrl = `http://608dev-2.net/sandbox/sc/team006/project/like.py`;
 
@@ -19,8 +40,8 @@ $(document).ready(function(){
       fileData: binData,
       userID: username,
       tags:tags,
-      lat:lat,
-      lon:long
+      lat:localStorage.getItem('lat'),
+      lon:localStorage.getItem('long')
     }
 
     $.post(url, data, function(data, status){
