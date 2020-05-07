@@ -2,7 +2,7 @@
 <html>
 
 <head>
-	<title>Parcel Sandbox</title>
+	<title>My Profile</title>
 	<!-- Required meta tags -->
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -36,17 +36,12 @@
 	      <li class="nav-item">
 	        <a class="nav-link" href="#">My Profile</a>
 	      </li>
-	      <li class="nav-item">
-	        <a class="nav-link" href="#">Bumper</a>
-	      </li>
 				<li class="nav-item">
 	        <a class="nav-link" href="createPost.html">Create a Post</a>
 	      </li>
-				<li class="nav-item">
-					<a class="nav-link" href="login.html">Login</a>
-				</li>
 	    </ul>
 	  </div>
+		<button class="btn btn-outline-success my-2 my-sm-0 logOutButton" type="button">Log Out</button>
 	</nav>
 
 	<div class="container-fluid">
@@ -56,7 +51,7 @@
 				<img src="https://lafeber.com/pet-birds/wp-content/uploads/2018/06/Parakeet.jpg" height=90 style="border-radius:40px;">
 			</div>
 			<div class="col-3">
-				<span>Bumps: 30</span></br>
+				<span>User: </span><span class="usernameSite"></span></br>
 				<span>Followers: </span><span class="followers-numbers"></span></br>
 				<span>Following: </span><span class="followees-numbers"></span></br>
 			</div>
@@ -68,7 +63,7 @@
 			<h1>My Photos</h1>
 		</div>
 		<div class="row justify-content-center myPostsHere">
-				<div class="col-4">
+				<!--<div class="col-4">
 					<div class="card postCard" style="width: 22rem;">
 						<div class="card-header">
 							<img src="https://lafeber.com/pet-birds/wp-content/uploads/2018/06/Parakeet.jpg" height=15 style="border-radius:5px;">
@@ -82,7 +77,7 @@
 							<button id="likeButton"><i class="fas fa-thumbs-up"></i></button> <span id="numLikes">0</span><span hidden id="postID">uad75hw</span>
 						</div>
 					</div>
-				</div>
+				</div>-->
 		</div>
 	</div>
 
@@ -92,6 +87,10 @@
 		integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ="
 		crossorigin="anonymous"></script>
 	<script src="src/myprofile.js"></script>
+	<script
+  src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"
+  integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30="
+  crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
