@@ -1,10 +1,14 @@
 let binData;
 
 $(document).ready(function(){
+  $(".logOutButton").click(function(){
+    localStorage.clear();
+    window.location.replace("login.html");
+  })
 
   $( "#createButton" ).click(function() {
-    //let username= $("#loggedInUsername").val();
-    let username="yousef";
+    let username=localStorage.getItem('usernameStored');
+    console.log(username);
     let tags=$("#tags").val();;
     let lat=$("#lat").val();;
     let long=$("#long").val();;
@@ -13,14 +17,21 @@ $(document).ready(function(){
 
     let data = {
       fileData: binData,
-      userID: "yousef",
+      userID: username,
       tags:tags,
       lat:lat,
       lon:long
     }
 
     $.post(url, data, function(data, status){
-      console.log(`${data}`);
+      console.log(data.indexOf("Something"));
+      if (data.indexOf("Something") == 0){
+        alert("Post not created. Please fill in all data points!");
+      }
+      else{
+        alert("Post created!");
+        window.location.replace("myprofile.html");
+      }
     });
   });
 });
