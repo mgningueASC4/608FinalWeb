@@ -59,6 +59,7 @@ function getFollowees(userID){
 
   $.get(url, function(data, status){
     //change numFollowees value here
+    numFollowees = data.split(')').length-1;
     $('.followees-numbers').text(`${numFollowees}`);
   });
 }
@@ -69,7 +70,7 @@ function getFollowers(userID){
 
   $.get(url, function(data, status){
     //change numFollowers value here
-    numFollowers=data.split(')').length-1
+    numFollowers=data.split(')').length-1;
     $('.followers-numbers').text(`${numFollowers}`);
   });
 }

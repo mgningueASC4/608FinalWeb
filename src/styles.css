@@ -1,9 +1,31 @@
 body {
-  font-family: sans-serif;
+  font-family: 'Lato', sans-serif !important;
+  background-color: #1b262c !important;
+  color: white !important;
+}
+
+.card{
+  background-color: #0f4c75 !important;
+}
+.card-title{
+  color: black;
+}
+
+button{
+  background-color: #bbe1fa !important;
+  border-radius: 4px;
+}
+
+.btn{
+   background-color: #264594 !important;
+}
+
+.navbar-custom{
+  background-color: #3282b8 !important;
 }
 
 #profile-banner{
-  background-image: url("profile-banner-background.jpg");
+  background-color: #00263b !important;
 }
 
 .post-images{
